@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/getcheckbox/" method="POST" >
+        {% csrf_token %}
+        <p>
+            111：<input type="checkbox"  name="favor" value="11"/>
+            222：<input type="checkbox" name="favor" value="22"/>
+            333：<input type="checkbox" name="favor" value="33"/>
+        </p>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

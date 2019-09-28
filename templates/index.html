@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     {% for k,value in user_dict.items %}
+            <li><a href="/detail-{{ k }}-4.html" target="_blank">{{ value.name }}</a></li>
+     {% endfor %}
+</body>
+</html>

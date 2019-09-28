@@ -1,0 +1,31 @@
+"""MySite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, re_path, include
+from cmdb import views as cm
+from GetCheckbox import views as gc
+from UpFile import views as uf
+from RouterRules import views as rr
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('login/', include('cmdb.urls')),  # 5.路由分发
+    path('home/', cm.home),
+    path('getcheckbox/', gc.GetCheckbox),
+    path('UpFile/', uf.UpFile),
+    path('index/', rr.index),
+    re_path(r'detail-(?P<nid>\d+)-(?P<uid>\d+).html/', rr.detail, name='i3'),
+]
