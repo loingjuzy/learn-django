@@ -19,6 +19,8 @@ from cmdb import views as cm
 from GetCheckbox import views as gc
 from UpFile import views as uf
 from RouterRules import views as rr
+from TestMysql import OperateMysql, ForeignLine
+from ExamMysql import views as ex
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,13 @@ urlpatterns = [
     path('UpFile/', uf.UpFile),
     path('index/', rr.index),
     re_path(r'detail-(?P<nid>\d+)-(?P<uid>\d+).html/', rr.detail, name='i3'),
+    path('insert/', OperateMysql.insert_data),
+    path('select/', OperateMysql.select_data),
+    path('update/', OperateMysql.update_data),
+    path('delete/', OperateMysql.delete_data),
+    path('delete_group/', OperateMysql.delete_group),
+    path('foreign/', ForeignLine.add),
+    path('select_join/', ForeignLine.select_join),
+    path('example/', ex.insert),
+
 ]
