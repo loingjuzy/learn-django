@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'RouterRules',  # 路由规则
     'TestMysql',  # 测试数据库
     'ExamMysql',  # 数据库示例
+    'TempLanguage',  # 模板语言
 ]
 
 MIDDLEWARE = [

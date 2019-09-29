@@ -38,5 +38,10 @@ urlpatterns = [
     path('foreign/', ForeignLine.add),
     path('select_join/', ForeignLine.select_join),
     path('example/', ex.insert),
+    path('business/', ex.business),
+    path('host/', ex.host),
+    path('add_host/', ex.add_host),
+    path('add_hostadmin/', ex.add_hostadmin),
+    path('user_info/', ex.user_info),
 
 ]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>主机列表(对象)</h1>
+    <table border="1">
+        <tread>
+            <tr>
+                <th>主机ID</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>业务线名称</th>
+            </tr>
+        </tread>
+        <tbody>
+            {% for row in v1 %}
+                <tr>
+                    <td>{{ row.hostname }}</td>
+                    <td>{{ row.ip }}</td>
+                    <td>{{ row.port }}</td>
+                    <td>{{ row.business.caption }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>主机列表（字典）</h1>
+    <table border="1">
+        <tread>
+            <tr>
+                <th>主机ID</th>
+                <th>主机名</th>
+                <th>业务线ID</th>
+                <th>业务线名称</th>
+            </tr>
+        </tread>
+        <tbody>
+            {% for row in v2 %}
+                <tr>
+                    <td>{{ row.nid }}</td>
+                    <td>{{ row.hostname }}</td>
+                    <td>{{ row.business__id }}</td>
+                    <td>{{ row.business__caption }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>主机列表（元祖）</h1>
+    <table border="1">
+        <tread>
+            <tr>
+                <th>主机ID</th>
+                <th>主机名</th>
+                <th>业务线ID</th>
+                <th>业务线名称</th>
+            </tr>
+        </tread>
+        <tbody>
+            {% for row in v3 %}
+                <tr>
+                    <td>{{ row.0 }}</td>
+                    <td>{{ row.1 }}</td>
+                    <td>{{ row.2 }}</td>
+                    <td>{{ row.3 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
