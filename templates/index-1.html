@@ -1,0 +1,15 @@
+{# 指定继承的模板 #}
+{% extends 'master.html' %}
+ 
+{# 指定替换的位置 #}
+{% block title %}
+    tp1
+{% endblock %}
+ 
+{# 指定替换的位置 #}
+{% block content %}
+    <p>tp1</p>
+ 
+    {# 导入单独组件 #}
+    {% include 'tag.html' %}
+{% endblock %}

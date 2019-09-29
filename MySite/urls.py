@@ -21,6 +21,7 @@ from UpFile import views as uf
 from RouterRules import views as rr
 from TestMysql import OperateMysql, ForeignLine
 from ExamMysql import views as ex
+from TempLanguage import views as tl
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,5 +44,6 @@ urlpatterns = [
     path('add_host/', ex.add_host),
     path('add_hostadmin/', ex.add_hostadmin),
     path('user_info/', ex.user_info),
+    path('user_list/', tl.user_list),
 
 ]
