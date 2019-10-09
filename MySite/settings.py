@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'TestMysql',  # 测试数据库
     'ExamMysql',  # 数据库示例
     'TempLanguage',  # 模板语言
+    'SetCookie',  # 设置COOKIES
+    'SetSession',  # 设置session
 ]
 
 MIDDLEWARE = [

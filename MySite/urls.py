@@ -22,6 +22,8 @@ from RouterRules import views as rr
 from TestMysql import OperateMysql, ForeignLine
 from ExamMysql import views as ex
 from TempLanguage import views as tl
+from SetCookie import views as sc
+from SetSession import views as ss
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,5 +47,8 @@ urlpatterns = [
     path('add_hostadmin/', ex.add_hostadmin),
     path('user_info/', ex.user_info),
     path('user_list/', tl.user_list),
-
+    path('login-0/', sc.login),
+    path('index-2/', sc.index),
+    path('login-1/', ss.login),
+    path('index-3/', ss.index),
 ]

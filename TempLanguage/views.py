@@ -61,7 +61,7 @@ def user_list(request):
         function jumpTo(ths,base) {
             var val = ths.previousSibling.value;
             location.href = base + val;
-        }
+        } 
     </script>
     '''
     page_list.append(jump)

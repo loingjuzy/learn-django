@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/login-1/" method="post">
+        {% csrf_token %}
+        <input type="text" name="user" />
+        <input type="text" name="pwd" />
+        <input type="checkbox" name="session" value="1"/>     //设置超时时间的
+        <input type="submit" value="提交" />
+    </form>
+</body>
+</html>
